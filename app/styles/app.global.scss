@@ -1,4 +1,5 @@
 @import "~font-awesome/css/font-awesome.css";
+@import "~react-input-range/lib/bundle/react-input-range.css";
 @import 'reset.scss';
 @import 'variables.scss';
 @import 'tooltip.scss';
@@ -209,4 +210,15 @@ input[type=number] {
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 50;
+}
+
+// input slider
+.input-range__track {
+  background: #313340;
+}
+
+.input-range__track--active,
+.input-range__slider {
+  background: rgb(253, 152, 0);
+  border: rgb(253, 152, 0);
 }

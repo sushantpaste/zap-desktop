@@ -31,17 +31,25 @@
   }
 }
 
-.lastUsedWallet {
-  margin: 50px 0;
-  padding: 0 40px;
+.content {
   display: flex;
   flex-direction: row;
+  height: 80%;
+  padding: 0 40px;
+}
+
+.lastUsedWallet {
+  // margin: 25px 0 50px 0;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   .wallet {
     display: flex;
     flex: 2;
     flex-direction: row;
+    align-items: center;
 
     .walletBox {
       position: relative;
@@ -89,15 +97,85 @@
       }
     }
   }
+}
 
-  .config {
-    flex: 1;
+.config {
+  flex: 1;
+
+  .setting {
+    padding-bottom: 20px;
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .networks {
+      display: flex;
+      flex-direction: row;
+
+      .btcNetwork,
+      .ltcNetwork {
+        flex: 1;
+        margin-right: 10px;
+
+        &:nth-child(1) div {
+          border: 1px solid rgb(253, 152, 0);
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          border-radius: 15px;
+          background: #313340;
+          width: 100px;
+          height: 100px;
+          cursor: pointer;
+        }
+
+        .btcLogo,
+        .ltcLogo {
+          display: flex;
+          align-items: center;
+        }
+
+        svg {
+          transition: all 0.25s;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &.autopiot {
+      section {
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .maxChannelsInput {
+        padding: 15px;
+        background: #313340;
+        border-radius: 6px;
+        margin-top: 5px;
+      }
+
+      .inputRange {
+        height: 1rem;
+        position: relative;
+        width: 100%;
+      }
+    }
   }
 }
 
 .otherWallets {
-  padding: 0 40px;
-
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
