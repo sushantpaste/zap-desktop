@@ -7,236 +7,43 @@
   color: $white;
 }
 
-.titleBar {
-  background: $spacegrey;
-  height: 20px;
-  -webkit-user-select: none;
-  -webkit-app-region: drag;
+.nav,
+.content {
+  display: inline-block;
+  vertical-align: top;
+  height: 100vh;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 40px;
+.nav {
+  position: relative;
+  width: 20%;
+  padding: 40px 25px;
+  background: rgb(49, 51, 64);
 
-  .circle {
-    color: rgb(57, 230, 115);
-    margin-right: 5px;
+  .wallets {
+    margin-top: 20px;
 
-    svg {
-      width: 7px;
-      height: 7px;
+    .subHeader {
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: bold;
     }
+
+    .wallet {
+      margin: 10px 0;
+
+      &.active {
+        color: rgb(253, 152, 0);
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
   }
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
-  height: 80%;
-  padding: 0 40px;
-}
-
-.lastUsedWallet {
-  // margin: 25px 0 50px 0;
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .wallet {
-    display: flex;
-    flex: 2;
-    flex-direction: row;
-    align-items: center;
-
-    .walletBox {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      background-image: linear-gradient(45deg, rgba(255, 189, 89, 0.5) 10%, rgba(253, 152, 0, 0.7));
-      border-radius: 15px;
-
-      .isvg {
-        position: absolute;
-        top: calc(50% - 25px);
-        left: calc(50% - 25px);
-
-        svg {
-          width: 50px;
-          height: 50px;
-          stroke-width: 1;
-        }
-      }
-    }
-
-    .walletTitle {
-      margin-left: 20px;
-      display: flex;
-      align-items: center;
-
-      h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-
-      .launch {
-        display: flex;
-        justify-content: flex-end;
-        cursor: pointer;
-        transition: all 0.25s;
-
-        &:hover {
-          opacity: 0.5;
-        }
-
-        svg {
-          margin-left: 5px;
-        }
-      }
-    }
-  }
-}
-
-.config {
-  flex: 1;
-
-  .setting {
-    padding-bottom: 20px;
-
-    h3 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .networks {
-      display: flex;
-      flex-direction: row;
-
-      .btcNetwork,
-      .ltcNetwork {
-        flex: 1;
-        margin-right: 10px;
-
-        &:nth-child(1) div {
-          border: 1px solid rgb(253, 152, 0);
-        }
-
-        div {
-          display: flex;
-          justify-content: center;
-          border-radius: 15px;
-          background: #313340;
-          width: 100px;
-          height: 100px;
-          cursor: pointer;
-        }
-
-        .btcLogo,
-        .ltcLogo {
-          display: flex;
-          align-items: center;
-        }
-
-        svg {
-          transition: all 0.25s;
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-
-    &.autopiot {
-      section {
-        margin-bottom: 10px;
-      }
-
-      span {
-        font-size: 10px;
-        text-transform: uppercase;
-      }
-
-      .maxChannelsInput {
-        padding: 15px;
-        background: #313340;
-        border-radius: 6px;
-        margin-top: 5px;
-      }
-
-      .inputRange {
-        height: 1rem;
-        position: relative;
-        width: 100%;
-      }
-    }
-  }
-}
-
-.otherWallets {
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-  }
-
-  li {
-    margin-right: 20px;
-    cursor: pointer;
-    transition: 0.25s all;
-
-    &:hover {
-      opacity: 0.75;
-    }
-
-    .otherWalletBox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      height: 100px;
-      background: rgb(49, 51, 64);
-      border-radius: 15px;
-
-      .btcpay svg {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    h4 {
-      font-size: 12px;
-      margin-top: 10px;
-    }
-
-    .timestamp {
-      font-size: 8px;
-      opacity: 0.5;
-    }
-
-    &.createWallet {
-      section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .createWalletCaption {
-          font-size: 10px;
-          margin-top: 5px;
-        }
-      }
-
-      .btcpay svg {
-        stroke: rgb(253, 152, 0);
-        stroke-width: 0.5;
-      }
-    }
-  }
+  width: 80%;
 }
