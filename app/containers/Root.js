@@ -228,7 +228,7 @@ class Root extends Component {
             theme={onboardingProps.theme}
             visible={!onboardingProps.onboarding.onboarding}
           />
-          <Onboarding {...onboardingProps} />
+          <NextOnboarding />
           <Syncing {...syncingProps} />
         </div>
       )

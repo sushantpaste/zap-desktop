@@ -1,5 +1,6 @@
 @import "~font-awesome/css/font-awesome.css";
-@import "~react-input-range/lib/bundle/react-input-range.css";
+@import "~react-toggle/style.css";
+@import '~rc-slider/assets/index.css';
 @import 'reset.scss';
 @import 'variables.scss';
 @import 'tooltip.scss';
@@ -221,4 +222,47 @@ input[type=number] {
 .input-range__slider {
   background: rgb(253, 152, 0);
   border: rgb(253, 152, 0);
+}
+
+// react-toggle
+.react-toggle--checked .react-toggle-track {
+  background: var(--superGreen);
+}
+
+.react-toggle-track {
+  width: 35px;
+  height: 22px;
+}
+
+.react-toggle-thumb {
+  width: 18px;
+  height: 18px;
+  top: 1.5px;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 16px;
+}
+
+// slider
+.rc-slider {
+  width: 220px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.rc-slider-rail {
+  background-color: var(--lightBackground);
+}
+
+.rc-slider-track {
+  background-color: var(--lightningOrange);
+}
+
+.rc-slider-handle {
+  border: none;
+  width: 8px;
+  height: 8px;
+  margin-top: -2px;
 }
